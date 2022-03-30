@@ -1,0 +1,97 @@
+{%extends 'base.html'%}
+
+{%block title%}Home{%endblock%}
+
+{%block content%}
+<!-- 
+<form action="/guardar" method="post">
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value="John"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" value="Doe"><br><br>
+    <hr>
+    
+    
+    <label for="cars">Choose a car:</label>
+    
+    <select id="cars" name="cars">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="opel">Opel</option>
+        <option value="audi">Audi</option>
+    </select>
+
+    <hr><br>
+
+    <input type="radio" name="age" id="dato1" value="1">
+    <label for="dato1">Uno</label><br>
+    <input type="radio" name="age" id="dato2" value="2">
+    <label for="dato2">Dos</label><br>
+    <input type="radio" name="age" id="dato3" value="3">
+    <label for="dato3">Tres</label><br>
+    <hr><br>
+
+    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+    <label for="vehicle1"> I have a bike</label><br>
+    <input type="checkbox" id="vehicle2" name="vehicle1" value="Car">
+    <label for="vehicle2"> I have a car</label><br>
+    <input type="checkbox" id="vehicle3" name="vehicle1" value="Boat">
+    <label for="vehicle3"> I have a boat</label><br>
+
+    <hr><br>
+    
+    <input type="submit" value="Submit"><br>
+</form> -->
+
+<form action="/guardar" method="post">
+    <h2>Datos personales</h2>
+    <input type="hidden" id="id" name="id" value="{%if datos %}{{datos[0]}}{%endif%}">
+    <label for="nombre">Nombre:</label><br>
+    <input type="text" id="nombre" name="nombre" value="{%if datos %}{{datos[1]}}{%endif%}"><br>
+    <label for="subnombre">Subnombre:</label><br>
+    <input type="text" id="subnombre" name="subnombre" value="{%if datos %}{{datos[2]}}{%endif%}"><br>
+    <label for="raza">Raza:</label><br>
+    <input type="text" id="raza" name="raza" value="{%if datos %}{{datos[3]}}{%endif%}"><br>
+    <label for="elemento">Elemento:</label><br>
+    <input type="text" id="elemento" name="elemento" value="{%if datos %}{{datos[4]}}{%endif%}"><br>
+    <label for="cc">CC:</label><br>
+    <input type="text" id="cc" name="cc" value="{%if datos %}{{datos[5]}}{%endif%}"><br>
+    <label for="ataque">Ataque:</label><br>
+    <input type="text" id="ataque" name="ataque" value="{%if datos %}{{datos[6]}}{%endif%}"><br>
+    <label for="defensa">Defensa:</label><br>
+    <input type="text" id="defensa" name="defensa" value="{%if datos %}{{datos[7]}}{%endif%}"><br>
+    <label for="vida">Vida:</label><br>
+    <input type="text" id="vida" name="vida" value="{%if datos %}{{datos[8]}}{%endif%}"><br>
+    <label for="equip_1">Equip_1:</label><br>
+    <input type="text" id="equip_1" name="equip_1" value="{%if datos %}{{datos[9]}}{%endif%}"><br>
+    <label for="equip_2">Equip_2:</label><br>
+    <input type="text" id="equip_2" name="equip_2" value="{%if datos %}{{datos[10]}}{%endif%}"><br>
+    <label for="festival">Festival:</label><br>
+    <input type="text" id="festival" name="festival" value="{%if datos %}{{datos[11]}}{%endif%}"><br>
+    <label for="habilidad_1">Habilidad_1:</label><br>
+    <input type="text" id="habilidad_1" name="habilidad_1" value="{%if datos %}{{datos[12]}}{%endif%}"><br>
+    <label for="habilidad_2">Habilidad_2:</label><br>
+    <input type="text" id="habilidad_2" name="habilidad_2" value="{%if datos %}{{datos[13]}}{%endif%}"><br>
+    <label for="ulrimate">Ultimate:</label><br>
+    <input type="text" id="ultimate" name="ultimate" value="{%if datos %}{{datos[14]}}{%endif%}"><br>
+    <label for="caracteristicas">Caracteristicas:</label><br>
+    <input type="text" id="caracteristicas" name="caracteristicas" value="{%if datos %}{{datos[15]}}{%endif%}"><br>
+    <label for="gracia">Gracia:</label><br>
+    <input type="text" id="gracia" name="gracia" value="{%if datos %}{{datos[16]}}{%endif%}"><br>
+    <label for="reliquia">Reliquia:</label><br>
+    <input type="text" id="reliquia" name="reliquia" value="{%if datos %}{{datos[17]}}{%endif%}"><br>
+   
+
+    <!-- <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+    <label for="vehicle1"> I have a bike</label><br>
+    <input type="checkbox" id="vehicle2" name="vehicle1" value="Car">
+    <label for="vehicle2"> I have a car</label><br>
+    <input type="checkbox" id="vehicle3" name="vehicle1" value="Boat">
+    <label for="vehicle3"> I have a boat</label><br> -->
+
+    <hr><br>
+    <input type="submit" value="Enviar">
+</form>
+
+
+{%endblock%}

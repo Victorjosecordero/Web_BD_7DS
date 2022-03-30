@@ -1,0 +1,59 @@
+
+{%extends 'base.html'%}
+
+{%block title%}Home{%endblock%}
+
+{%block content%}
+    <h1>Hola Mundo de las pantillas</h1>
+    
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Subnombre</th>
+            <th>Raza</th>
+            <th>Elemento</th>
+            <th>CC</th>
+            <th>Ataque</th>
+            <th>Defensa</th>
+            <th>Vida</th>
+            <th>Equip_1</th>
+            <th>Equip_2</th>
+            <th>Festival</th>
+            <th>Habilidad_1</th>
+            <th>Habilidad_2</th>
+            <th>Ultimate</th>
+            <th>Caracteristicas</th>
+            <th>Gracia</th>
+            <th>Reliquia</th>
+            <th colspan="2">Acciones</th>
+        </tr>
+        {% for filas in datos%}
+        <tr>
+            <td>{{filas[0]}}</td>
+            <td>{{filas[1]}}</td>
+            <td>{{filas[2]}}</td>
+            <td>{{filas[3]}}</td>
+            <td>{{filas[4]}}</td>
+            <td>{{filas[5]}}</td>
+            <td>{{filas[6]}}</td>
+            <td>{{filas[7]}}</td>
+            <td>{{filas[8]}}</td>
+            <td>{{filas[9]}}</td>
+            <td>{{filas[10]}}</td>
+            <td>{{filas[11]}}</td>
+            <td>{{filas[12]}}</td>
+            <td>{{filas[13]}}</td>
+            <td>{{filas[14]}}</td>
+            <td>{{filas[15]}}</td>
+            <td>{{filas[16]}}</td>
+            <td>{{filas[17]}}</td>
+
+            <td><a href="editar/{{filas[0]}}">Editar</a></td>
+            <td><a href="eliminar/{{filas[0]}}">Eliminar</a></td>
+        </tr>
+        {%endfor%}
+    </table>
+
+    
+    {%endblock%}
